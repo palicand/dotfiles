@@ -1,0 +1,10 @@
+.vscode
+.mypy_cache
+docker-compose.dev.yaml
+.env
+docs/README.md
+
+*.~lock*
+*.egg-info/
+
+Untitled.ipynb
