@@ -1,0 +1,29 @@
+[user]
+	email = andrej.palicka@quantlane.com
+	name = Andrej Palička
+	signingkey = andrej.palicka@quantlane.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+	excludesfile = /home/development/.gitignore_global
+	editor = vim
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	fap = fetch -ap
+	co = checkout
+	cob = checkout -b
+	unstage = reset HEAD --
+	ci = commit
+	ciam = commit -am
+	st = status
+	br = branch
+	type = cat-file -t
+	dump = cat-file -p
+[commit]
+	gpgsign = true
+[rerere]
+	enabled = true
