@@ -45,9 +45,11 @@ SAVEHIST=5000
 HISTFILE=~/.zsh_history
 
 source ~/.zplug/init.zsh
-zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/gitfast", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
@@ -94,3 +96,14 @@ zplug load
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 pyenv virtualenvwrapper
+
+fbr() {
+  git fetch
+  local branches branch
+  branches=$(git branch -a) &&
+  branch=$(echo "$branches" | fzf +s +m -e) &&
+  git checkout $(echo "$branch" | sed "s:.* remotes/origin/::" | sed "s:.* ::")
+}
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
