@@ -1,7 +1,3 @@
-[user]
-	email = andrej.palicka@quantlane.com
-	name = Andrej Palička
-	signingkey = andrej.palicka@quantlane.com
 [color]
   diff = auto
   status = auto
@@ -23,8 +19,6 @@
 	br = branch
 	type = cat-file -t
 	dump = cat-file -p
-[commit]
-	gpgsign = true
 [rerere]
 	enabled = true
 [filter "lfs"]
@@ -32,3 +26,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	email = andrej.palicka@gmail.com
+	name = Andrej Palicka

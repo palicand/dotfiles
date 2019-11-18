@@ -9,13 +9,13 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 
-export TERMINAL=alacritty
+# export TERMINAL=alacritty
 export TERM=xterm-256color
 export PATH=$HOME/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
 export GPG_TTY=$(tty)
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=86'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=86'
 
 ZSH_THEME=""
 setopt COMPLETE_ALIASES
@@ -79,7 +79,7 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias cpkey="pbcopy < ~/.ssh/id_rsa.pub"
 alias gpg=gpg2
-alias coffee=~/coffee.sh
+# alias coffee=~/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
 # xrandr --output DP-1-2 --auto --right-of DisplayPort-3
 source $HOME/.secrets
@@ -92,6 +92,9 @@ if ! zplug check; then
 fi
 
 zplug load
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
