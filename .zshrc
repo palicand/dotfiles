@@ -73,6 +73,7 @@ zplug "mafredri/zsh-async", from:github
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
+zplug "darvid/zsh-poetry"
 open() { xdg-open &>/dev/null $1 & }
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -107,3 +108,41 @@ fbr() {
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export fpath=(/usr/share/bash-completion/completions $fpath)
+
+_fzf_complete_git() {
+    ARGS="$@"
+    local branches
+    branches=$(git branch -vv --all)
+    if [[ $ARGS == 'git co'* ]]; then
+        _fzf_complete "--reverse --multi" "$@" < <(
+            echo $branches
+        )
+    else
+        eval "zle ${fzf_default_completion:-expand-or-complete}"
+    fi
+}
+
+_fzf_complete_git_post() {
+    awk '{print $1}'
+}
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+get_po() {
+	kubectl -n $1 get po | cut -f1 -d " " | grep $2
+}
+source $HOME/.poetry/env
+
+deploy-edge() {
+    deployment-tool deploy --version=version/$1 backend/deployment.yml.jinja2 backend/profiles/production/$2_variables.yml --pause-deployment --no-git
+}
+pfg() {
+	pip freeze | grep $1
+}
+export PATH=$(yarn global bin):$PATH
+
