@@ -1,92 +1,96 @@
 {
-    "python.venvFolders": [
-        "envs",
-        ".pyenv",
-        ".direnv",
-        ".virtualenvs",
-        ".cache/pypoetry/virtualenvs"
-    ],
-    "python.pythonPath": "/home/development/.pyenv/versions/3.8.0/bin/python",
-    "editor.insertSpaces": false,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "python.testing.pytestEnabled": true,
-    "files.associations": {
-        "Dockerfile.*": "dockerfile",
-        "pyx": "python",
-        "*.pyx": "python"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "gitlab.instanceUrl": "https://gitlab.int.quantlane.com",
-    "git.autofetch": true,
-    "python.linting.mypyArgs": [
-        "--ignore-missing-imports",
-        "--follow-imports=silent",
-        "--strict-optional"
-    ],
-    "python.venvPath": "~/.virtualenvs",
-    "restructuredtext.confPath": "${workspaceRoot}/docs",
-    "terminal.integrated.rendererType": "dom",
-    "editor.mouseWheelZoom": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "autoDocstring.docstringFormat": "sphinx",
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 120,
-    "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
-    "python.linting.pylintEnabled": true,
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
-    "python.analysis.logLevel": "Trace",
-    "editor.renderWhitespace": "all",
-    "editor.fontWeight": "600",
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/.cache": true,
-        "**/.hypothesis": true,
-        "**/.ipynb_checkpoints": true,
-        "**/.mypy_cache": true
-    },
-    "python.jediEnabled": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
-    "python.linting.mypyEnabled": true,
-    "python.formatting.provider": "black",
-    "remote.containers.defaultExtensions": [
-        "ms-python.python",
-        "visualstudioexptteam.vscodeintellicode",
-        "eamodio.gitlens",
-        "mutantdino.resourcemonitor"
-    ],
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'Iosevka SS09','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.suggestSelection": "first",
-    "terminal.integrated.experimentalRefreshOnResume": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "vs-kubernetes": {
-        "vs-kubernetes.helm-path": "/home/development/.vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vs-kubernetes.minikube-path": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.draft-path": "/home/development/.vs-kubernetes/tools/draft/linux-amd64/draft"
-    },
-    "python.analysis.memory.keepLibraryAst": true,
-    "python.analysis.memory.keepLibraryLocalVariables": true,
-    "window.zoomLevel": 1,
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "Iosevka Term",
-    "update.showReleaseNotes": false,
-    "python.insidersChannel": "off",
-    "C_Cpp.workspaceSymbols": "All",
-    "yaml.format.enable": false,
-    "python.autoComplete.addBrackets": true,
-    "prettier.disableLanguages": [
-        "vue",
-        "markdown"
-    ],
-    "python.analysis.cachingLevel": "None",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "python.dataScience.askForKernelRestart": false,
-    "editor.formatOnSave": true,
+  "python.venvFolders": [
+    "envs",
+    ".pyenv",
+    ".direnv",
+    ".virtualenvs",
+    ".cache/pypoetry/virtualenvs"
+  ],
+  "python.pythonPath": "/home/development/.pyenv/versions/3.8.0/bin/python",
+  "editor.insertSpaces": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "python.testing.pytestEnabled": true,
+  "files.associations": {
+    "Dockerfile.*": "dockerfile",
+    "pyx": "python",
+    "*.pyx": "python"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "gitlab.instanceUrl": "https://gitlab.int.quantlane.com",
+  "git.autofetch": true,
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--strict-optional"
+  ],
+  "python.venvPath": "~/.virtualenvs",
+  "restructuredtext.confPath": "${workspaceRoot}/docs",
+  "terminal.integrated.rendererType": "dom",
+  "editor.mouseWheelZoom": true,
+  "editor.rulers": [80, 120],
+  "autoDocstring.docstringFormat": "sphinx",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "python.linting.pylintEnabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "python.analysis.logLevel": "Trace",
+  "editor.renderWhitespace": "all",
+  "editor.fontWeight": "600",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.cache": true,
+    "**/.hypothesis": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.mypy_cache": true,
+    "**/.stack-work": true
+  },
+  "python.jediEnabled": false,
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "python.linting.mypyEnabled": true,
+  "python.formatting.provider": "black",
+  "remote.containers.defaultExtensions": [
+    "ms-python.python",
+    "visualstudioexptteam.vscodeintellicode",
+    "eamodio.gitlens",
+    "mutantdino.resourcemonitor"
+  ],
+  "editor.fontFamily": "'Iosevka SS09','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "terminal.integrated.experimentalRefreshOnResume": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path": "/home/development/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vs-kubernetes.minikube-path": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vs-kubernetes.draft-path": "/home/development/.vs-kubernetes/tools/draft/linux-amd64/draft"
+  },
+  "python.analysis.memory.keepLibraryAst": true,
+  "python.analysis.memory.keepLibraryLocalVariables": true,
+  "window.zoomLevel": 1,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "Iosevka Term SS09",
+  "update.showReleaseNotes": false,
+  "python.insidersChannel": "off",
+  "C_Cpp.workspaceSymbols": "All",
+  "yaml.format.enable": false,
+  "python.autoComplete.addBrackets": true,
+  "prettier.disableLanguages": ["vue", "markdown"],
+  "python.analysis.cachingLevel": "None",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "python.dataScience.askForKernelRestart": false,
+  "editor.formatOnSave": true,
+  "window.titleBarStyle": "custom",
+  "files.watcherExclude": {
+    "**/.stack-work": true
+  },
+  "breadcrumbs.enabled": true,
+  "[haskell]": {
+    "editor.defaultFormatter": "alanz.vscode-hie-server"
+  },
+  "languageServerHaskell.formattingProvider": "floskell",
+  "languageServerHaskell.liquidOn": true,
+  "languageServerHaskell.useCustomHieWrapper": true,
+  "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
+  "gitlab.enableExperimentalFeatures": true
 }

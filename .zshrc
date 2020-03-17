@@ -15,6 +15,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
 export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=86'
 
 ZSH_THEME=""
@@ -148,4 +149,5 @@ pfg() {
 	pip freeze | grep $1
 }
 export PATH=$(yarn global bin):$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
