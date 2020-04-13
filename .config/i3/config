@@ -175,7 +175,7 @@ bindsym $mod+Shift+o move workspace to output left
 
 bindsym $mod+m exec "i3-input -F 'mark %s' -P 'Mark: '"
 bindsym $mod+g exec "i3-input -F '[con_mark=%s] focus' -P 'Go to: '"
-exec xrandr --output DP-1-2 --auto --right-of DisplayPort-3
+exec $HOME/.screenlayout/screen.sh
 bindsym --release Print exec "gnome-screenshot -i"
 
 # Pulse Audio controls

@@ -29,10 +29,12 @@
   "restructuredtext.confPath": "${workspaceRoot}/docs",
   "terminal.integrated.rendererType": "dom",
   "editor.mouseWheelZoom": true,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    110
+  ],
   "autoDocstring.docstringFormat": "sphinx",
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 120,
+  "editor.wordWrapColumn": 110,
   "python.linting.pylintEnabled": true,
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
@@ -40,12 +42,18 @@
   "editor.renderWhitespace": "all",
   "editor.fontWeight": "600",
   "files.exclude": {
+    "*.jar": true,
+    "*.parquet.gz2": true,
+    "*.pkl": true,
+    "*.zip": true,
     "**/__pycache__": true,
     "**/.cache": true,
     "**/.hypothesis": true,
     "**/.ipynb_checkpoints": true,
     "**/.mypy_cache": true,
-    "**/.stack-work": true
+    "**/.stack-work": true,
+    "**/data_cache": true,
+    "**/tensorboard": true
   },
   "python.jediEnabled": false,
   "python.dataScience.sendSelectionToInteractiveWindow": true,
@@ -75,7 +83,10 @@
   "C_Cpp.workspaceSymbols": "All",
   "yaml.format.enable": false,
   "python.autoComplete.addBrackets": true,
-  "prettier.disableLanguages": ["vue", "markdown"],
+  "prettier.disableLanguages": [
+    "vue",
+    "markdown"
+  ],
   "python.analysis.cachingLevel": "None",
   "diffEditor.ignoreTrimWhitespace": true,
   "python.dataScience.askForKernelRestart": false,
@@ -92,5 +103,7 @@
   "languageServerHaskell.liquidOn": true,
   "languageServerHaskell.useCustomHieWrapper": true,
   "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
-  "gitlab.enableExperimentalFeatures": true
+  "gitlab.enableExperimentalFeatures": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

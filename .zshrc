@@ -1,3 +1,14 @@
+
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+sh $HOME/.screenlayout/screen.sh
+
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 export LANG=en_US.UTF-8
@@ -75,14 +86,20 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "darvid/zsh-poetry"
+
+
 open() { xdg-open &>/dev/null $1 & }
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias cpkey="pbcopy < ~/.ssh/id_rsa.pub"
 alias gpg=gpg2
+alias grep=rg
+alias cat=bat
+alias less=bat
+alias fzf=sk
+alias iftop=bandwhich
 # alias coffee=~/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
-# xrandr --output DP-1-2 --auto --right-of DisplayPort-3
 source $HOME/.secrets
 wttr() { curl "https://wttr.in/$1" }
 
@@ -150,4 +167,3 @@ pfg() {
 }
 export PATH=$(yarn global bin):$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
-
