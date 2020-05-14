@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-sh $HOME/.screenlayout/screen.sh
+sh $HOME/.screenlayout/screen.sh 2> /dev/null
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
