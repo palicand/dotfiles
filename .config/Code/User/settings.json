@@ -71,7 +71,8 @@
   "vs-kubernetes": {
     "vs-kubernetes.helm-path": "/home/development/.vs-kubernetes/tools/helm/linux-amd64/helm",
     "vs-kubernetes.minikube-path": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-    "vs-kubernetes.draft-path": "/home/development/.vs-kubernetes/tools/draft/linux-amd64/draft"
+    "vs-kubernetes.draft-path": "/home/development/.vs-kubernetes/tools/draft/linux-amd64/draft",
+    "vs-kubernetes.minikube-path.linux": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
   "python.analysis.memory.keepLibraryAst": true,
   "python.analysis.memory.keepLibraryLocalVariables": true,

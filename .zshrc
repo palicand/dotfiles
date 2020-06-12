@@ -3,9 +3,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 sh $HOME/.screenlayout/screen.sh 2> /dev/null
 
@@ -58,7 +58,7 @@ HISTFILE=~/.zsh_history
 
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
+# zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/gitfast", from:oh-my-zsh
@@ -81,6 +81,7 @@ zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "plugins/encode64", from:oh-my-zsh
+zplug "StackExchange/blackbox"
 zplug "mafredri/zsh-async", from:github
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
@@ -98,7 +99,7 @@ alias cat=bat
 alias less=bat
 alias fzf=sk
 alias iftop=bandwhich
-# alias coffee=~/coffee.sh
+alias coffee=$HOME/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
 source $HOME/.secrets
 wttr() { curl "https://wttr.in/$1" }
@@ -167,3 +168,5 @@ pfg() {
 }
 export PATH=$(yarn global bin):$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(starship init zsh)"
+
