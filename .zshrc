@@ -55,7 +55,6 @@ bindkey -v
 HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history
-
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 # zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
@@ -111,6 +110,8 @@ if ! zplug check; then
 fi
 
 zplug load
+unsetopt correct_all
+unsetopt correct
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

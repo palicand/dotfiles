@@ -106,5 +106,8 @@
   "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
   "gitlab.enableExperimentalFeatures": true,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Pylance",
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
+  "python.analysis.typeCheckingMode": "basic"
 }

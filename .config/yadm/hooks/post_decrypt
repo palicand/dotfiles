@@ -1,0 +1,1 @@
+jq -s '.[0] * .[1]' .config/Code/User/settings.json $HOME/.vscode-secrets.json
