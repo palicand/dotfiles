@@ -3,12 +3,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-sh $HOME/.screenlayout/screen.sh 2> /dev/null
-
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 export LANG=en_US.UTF-8
@@ -25,8 +19,6 @@ export TERM=xterm-256color
 export PATH=$HOME/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
-export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=86'
 
 ZSH_THEME=""
@@ -76,15 +68,30 @@ zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/dotenv", from:oh-my-zsh
 zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/ssh-agent", from:oh-my-zsh
-zplug "plugins/gpg-agent", from:oh-my-zsh
+# zplug "plugins/ssh-agent", from:oh-my-zsh
+# zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "plugins/encode64", from:oh-my-zsh
+zplug "plugins/gcloud", from:oh-my-zsh
+zplug "plugins/terraform", from:oh-my-zsh
 zplug "StackExchange/blackbox"
 zplug "mafredri/zsh-async", from:github
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "darvid/zsh-poetry"
+zplug "mvock/zsh-jwt"
+
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load
+unsetopt correct_all
+unsetopt correct
+
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 
 open() { xdg-open &>/dev/null $1 & }
@@ -97,20 +104,13 @@ alias cat=bat
 alias less=bat
 alias fzf=sk
 alias iftop=bandwhich
-alias coffee=$HOME/coffee.sh
+alias cp='cp --reflink=auto --sparse=always'
+# alias coffee=~/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
 source $HOME/.secrets
 wttr() { curl "https://wttr.in/$1" }
 
 # zplug "plugins/git", from:oh-my-zsh
-
-if ! zplug check; then
-    zplug install
-fi
-
-zplug load
-unsetopt correct_all
-unsetopt correct
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
@@ -170,3 +170,11 @@ export PATH=$(yarn global bin):$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(starship init zsh)"
 
+# force chrome to use gnome keyring
+export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --password-store=gnome"
+export CHROME_FLAGS="$CHROME_FLAGS --password-store=gnome"
+alias chrome="google-chrome --password-store=gnome"
+
+if [ -e /home/palicand/.nix-profile/etc/profile.d/nix.sh ]; then . /home/palicand/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

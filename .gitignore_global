@@ -9,3 +9,7 @@ docs/README.md
 *.egg-info/
 
 Untitled.ipynb
+.idea/
+.metals/
+.bloop/
+target/

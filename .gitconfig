@@ -3,7 +3,7 @@
   status = auto
   branch = auto
 [core]
-	excludesfile = /home/development/.gitignore_global
+	excludesFile = /home/palicand/.gitignore_global
 	editor = vim
 [push]
 	default = simple

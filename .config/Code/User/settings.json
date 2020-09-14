@@ -7,7 +7,7 @@
     ".cache/pypoetry/virtualenvs"
   ],
   "python.pythonPath": "/home/development/.pyenv/versions/3.8.0/bin/python",
-  "editor.insertSpaces": false,
+  "editor.insertSpaces": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
@@ -18,21 +18,12 @@
     "*.pyx": "python"
   },
   "explorer.confirmDragAndDrop": false,
-  "gitlab.instanceUrl": "https://gitlab.int.quantlane.com",
   "git.autofetch": true,
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--strict-optional"
-  ],
+  "python.linting.mypyArgs": ["--ignore-missing-imports", "--strict-optional"],
   "python.venvPath": "~/.virtualenvs",
-  "restructuredtext.confPath": "${workspaceRoot}/docs",
   "terminal.integrated.rendererType": "dom",
   "editor.mouseWheelZoom": true,
-  "editor.rulers": [
-    110
-  ],
-  "autoDocstring.docstringFormat": "sphinx",
+  "editor.rulers": [110],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 110,
   "python.linting.pylintEnabled": true,
@@ -55,7 +46,6 @@
     "**/data_cache": true,
     "**/tensorboard": true
   },
-  "python.jediEnabled": false,
   "python.dataScience.sendSelectionToInteractiveWindow": true,
   "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
@@ -66,7 +56,6 @@
     "mutantdino.resourcemonitor"
   ],
   "editor.fontFamily": "'Iosevka SS09','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "terminal.integrated.experimentalRefreshOnResume": true,
   "workbench.startupEditor": "newUntitledFile",
   "vs-kubernetes": {
     "vs-kubernetes.helm-path": "/home/development/.vs-kubernetes/tools/helm/linux-amd64/helm",
@@ -76,40 +65,54 @@
   },
   "python.analysis.memory.keepLibraryAst": true,
   "python.analysis.memory.keepLibraryLocalVariables": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "Iosevka Term SS09",
   "update.showReleaseNotes": false,
   "python.insidersChannel": "off",
-  "C_Cpp.workspaceSymbols": "All",
   "yaml.format.enable": false,
   "python.autoComplete.addBrackets": true,
-  "prettier.disableLanguages": [
-    "vue",
-    "markdown"
-  ],
+  "prettier.disableLanguages": ["vue", "markdown"],
   "python.analysis.cachingLevel": "None",
   "diffEditor.ignoreTrimWhitespace": true,
   "python.dataScience.askForKernelRestart": false,
-  "editor.formatOnSave": true,
   "window.titleBarStyle": "custom",
   "files.watcherExclude": {
     "**/.stack-work": true
   },
   "breadcrumbs.enabled": true,
-  "[haskell]": {
-    "editor.defaultFormatter": "alanz.vscode-hie-server"
-  },
-  "languageServerHaskell.formattingProvider": "floskell",
-  "languageServerHaskell.liquidOn": true,
-  "languageServerHaskell.useCustomHieWrapper": true,
-  "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
-  "gitlab.enableExperimentalFeatures": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true,
+  "circleci.apiKey": "c7e13ded9be9838b6d90eafb41197e8af586bbec",
   "python.languageServer": "Pylance",
-  "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
+  "haskell.liquidOn": true,
+  "haskell.formattingProvider": "fourmolu",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.autoImportCompletions": false
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "yaml.schemas": {
+    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "id": "0f837628-d9f9-43d3-a51d-5dac16d92b44",
+      "enabled": true,
+      "name": "My backbonephoto Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "f2e340eb-47d1-44ce-9953-7c86d02e0242",
+      "monitor": true
+    }
+  ],
+  "cloudcode.gke": {
+    "projectIds": ["backbone-development"]
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "python.linting.enabled": false,
+  "python.linting.banditEnabled": true,
+  "python.linting.flake8Enabled": true
 }
