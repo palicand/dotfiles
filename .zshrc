@@ -107,6 +107,7 @@ alias iftop=bandwhich
 alias cp='cp --reflink=auto --sparse=always'
 # alias coffee=~/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
+alias whatismyip="dig +short myip.opendns.com @resolver1.opendns.com"
 source $HOME/.secrets
 wttr() { curl "https://wttr.in/$1" }
 
@@ -178,3 +179,5 @@ alias chrome="google-chrome --password-store=gnome"
 if [ -e /home/palicand/.nix-profile/etc/profile.d/nix.sh ]; then . /home/palicand/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"

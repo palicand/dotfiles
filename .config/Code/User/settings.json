@@ -45,8 +45,7 @@
     "**/.stack-work": true,
     "**/data_cache": true,
     "**/tensorboard": true
-  },
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
+},
   "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
   "remote.containers.defaultExtensions": [
@@ -61,7 +60,9 @@
     "vs-kubernetes.helm-path": "/home/development/.vs-kubernetes/tools/helm/linux-amd64/helm",
     "vs-kubernetes.minikube-path": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
     "vs-kubernetes.draft-path": "/home/development/.vs-kubernetes/tools/draft/linux-amd64/draft",
-    "vs-kubernetes.minikube-path.linux": "/home/development/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    "vs-kubernetes.minikube-path.linux": "/home/palicand/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vs-kubernetes.helm-path.linux": "/home/palicand/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vs-kubernetes.draft-path.linux": "/home/palicand/.vs-kubernetes/tools/draft/linux-amd64/draft"
   },
   "python.analysis.memory.keepLibraryAst": true,
   "python.analysis.memory.keepLibraryLocalVariables": true,
@@ -74,8 +75,7 @@
   "python.autoComplete.addBrackets": true,
   "prettier.disableLanguages": ["vue", "markdown"],
   "python.analysis.cachingLevel": "None",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "python.dataScience.askForKernelRestart": false,
+"diffEditor.ignoreTrimWhitespace": true,
   "window.titleBarStyle": "custom",
   "files.watcherExclude": {
     "**/.stack-work": true
@@ -94,7 +94,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "yaml.schemas": {
-    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.jira.jqlList": [
     {
@@ -114,5 +114,20 @@
   },
   "python.linting.enabled": false,
   "python.linting.banditEnabled": true,
-  "python.linting.flake8Enabled": true
+  "python.linting.flake8Enabled": true,
+
+  "plantuml.server": "http://localhost:18080",
+  "plantuml.render": "PlantUMLServer",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+"sqltools.useNodeRuntime": true,
+"jupyter.sendSelectionToInteractiveWindow": true,
+"jupyter.askForKernelRestart": false,
+"workbench.editorAssociations": [
+  {
+    "viewType": "jupyter.notebook.ipynb",
+    "filenamePattern": "*.ipynb"
+  }
+],
 }
