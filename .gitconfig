@@ -19,6 +19,7 @@
 	br = branch
 	type = cat-file -t
 	dump = cat-file -p
+	ff = merge --ff
 [rerere]
 	enabled = true
 [filter "lfs"]

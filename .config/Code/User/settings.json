@@ -6,11 +6,8 @@
     ".virtualenvs",
     ".cache/pypoetry/virtualenvs"
   ],
-  "python.pythonPath": "/home/development/.pyenv/versions/3.8.0/bin/python",
+  "python.pythonPath": "/home/palicand/.pyenv/versions/3.8.7/bin/python",
   "editor.insertSpaces": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
   "python.testing.pytestEnabled": true,
   "files.associations": {
     "Dockerfile.*": "dockerfile",
@@ -19,15 +16,19 @@
   },
   "explorer.confirmDragAndDrop": false,
   "git.autofetch": true,
-  "python.linting.mypyArgs": ["--ignore-missing-imports", "--strict-optional"],
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--strict-optional"
+  ],
   "python.venvPath": "~/.virtualenvs",
   "terminal.integrated.rendererType": "dom",
   "editor.mouseWheelZoom": true,
-  "editor.rulers": [110],
+  "editor.rulers": [
+    110
+  ],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 110,
   "python.linting.pylintEnabled": true,
-  "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "python.analysis.logLevel": "Trace",
   "editor.renderWhitespace": "all",
@@ -45,7 +46,7 @@
     "**/.stack-work": true,
     "**/data_cache": true,
     "**/tensorboard": true
-},
+  },
   "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
   "remote.containers.defaultExtensions": [
@@ -73,9 +74,12 @@
   "python.insidersChannel": "off",
   "yaml.format.enable": false,
   "python.autoComplete.addBrackets": true,
-  "prettier.disableLanguages": ["vue", "markdown"],
+  "prettier.disableLanguages": [
+    "vue",
+    "markdown"
+  ],
   "python.analysis.cachingLevel": "None",
-"diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": true,
   "window.titleBarStyle": "custom",
   "files.watcherExclude": {
     "**/.stack-work": true
@@ -94,7 +98,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "yaml.schemas": {
-    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.jira.jqlList": [
     {
@@ -107,7 +111,9 @@
     }
   ],
   "cloudcode.gke": {
-    "projectIds": ["backbone-development"]
+    "projectIds": [
+      "backbone-development"
+    ]
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -115,19 +121,19 @@
   "python.linting.enabled": false,
   "python.linting.banditEnabled": true,
   "python.linting.flake8Enabled": true,
-
   "plantuml.server": "http://localhost:18080",
   "plantuml.render": "PlantUMLServer",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-"sqltools.useNodeRuntime": true,
-"jupyter.sendSelectionToInteractiveWindow": true,
-"jupyter.askForKernelRestart": false,
-"workbench.editorAssociations": [
-  {
-    "viewType": "jupyter.notebook.ipynb",
-    "filenamePattern": "*.ipynb"
-  }
-],
+  "sqltools.useNodeRuntime": true,
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "jupyter.askForKernelRestart": false,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "liveshare.authenticationProvider": "GitHub"
 }

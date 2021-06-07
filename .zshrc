@@ -68,6 +68,7 @@ zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/dotenv", from:oh-my-zsh
 zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/fzf", from:oh-my-zsh
 # zplug "plugins/ssh-agent", from:oh-my-zsh
 # zplug "plugins/gpg-agent", from:oh-my-zsh
 zplug "plugins/encode64", from:oh-my-zsh
@@ -79,7 +80,6 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "darvid/zsh-poetry"
-zplug "mvock/zsh-jwt"
 
 if ! zplug check; then
     zplug install
@@ -108,7 +108,11 @@ alias cp='cp --reflink=auto --sparse=always'
 # alias coffee=~/coffee.sh
 alias ua="sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y"
 alias whatismyip="dig +short myip.opendns.com @resolver1.opendns.com"
-source $HOME/.secrets
+if ! command -v idea &> /dev/null
+then
+	alias idea=intellij-idea-ultimate
+fi
+
 wttr() { curl "https://wttr.in/$1" }
 
 # zplug "plugins/git", from:oh-my-zsh
@@ -181,3 +185,10 @@ if [ -e /home/palicand/.nix-profile/etc/profile.d/nix.sh ]; then . /home/palican
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/palicand/.sdkman"
+[[ -s "/home/palicand/.sdkman/bin/sdkman-init.sh" ]] && source "/home/palicand/.sdkman/bin/sdkman-init.sh"
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
