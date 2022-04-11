@@ -19,6 +19,7 @@ export TERM=xterm-256color
 export PATH=$HOME/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=86'
 
 ZSH_THEME=""
@@ -80,6 +81,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "darvid/zsh-poetry"
+zplug "gradle/gradle-completion", from:github
 
 if ! zplug check; then
     zplug install
@@ -192,3 +194,11 @@ export SDKMAN_DIR="/home/palicand/.sdkman"
 
 # add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
+
+DOCKER_BUILDKIT=1
+
+# set PATH for cuda 11.1 installation
+if [ -d "/usr/local/cuda-11.6/bin/" ]; then
+    export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi

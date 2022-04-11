@@ -29,7 +29,7 @@
 	required = true
 [user]
 	email = andrej.palicka@gmail.com
-        name = Andrej Palicka
+	name = Andrej Palička
 	signingkey = 0x95F118F24B5B361D
 [includeIf "gitdir:~/projects/backbone"]
     path = ~/projects/backbone/.gitignore

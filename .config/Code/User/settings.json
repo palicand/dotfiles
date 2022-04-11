@@ -67,7 +67,6 @@
   },
   "python.analysis.memory.keepLibraryAst": true,
   "python.analysis.memory.keepLibraryLocalVariables": true,
-  "window.zoomLevel": 0,
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "Iosevka Term SS09",
   "update.showReleaseNotes": false,
@@ -98,7 +97,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "yaml.schemas": {
-    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///home/palicand/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.jira.jqlList": [
     {
@@ -129,11 +128,17 @@
   "sqltools.useNodeRuntime": true,
   "jupyter.sendSelectionToInteractiveWindow": true,
   "jupyter.askForKernelRestart": false,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "liveshare.authenticationProvider": "GitHub"
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "liveshare.authenticationProvider": "GitHub",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.defaultInterpreterPath": "/home/palicand/.pyenv/versions/3.8.7/bin/python",
+  "platformio-ide.disablePIOHomeStartup": true,
+  "tabnine.experimentalAutoImports": true,
+  "rust-client.updateOnStartup": true,
+  "terminal.integrated.fontSize": 16,
+  "files.maxMemoryForLargeFilesMB": 8192
 }
