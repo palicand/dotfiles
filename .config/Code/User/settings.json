@@ -140,5 +140,6 @@
   "tabnine.experimentalAutoImports": true,
   "rust-client.updateOnStartup": true,
   "terminal.integrated.fontSize": 16,
-  "files.maxMemoryForLargeFilesMB": 8192
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "haskell.manageHLS": "PATH"
 }

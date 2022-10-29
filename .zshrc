@@ -82,6 +82,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "darvid/zsh-poetry"
 zplug "gradle/gradle-completion", from:github
+zplug "plugins/rust", from:oh-my-zsh
 
 if ! zplug check; then
     zplug install
